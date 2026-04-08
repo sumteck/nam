@@ -4,7 +4,7 @@ self.addEventListener('install', (e) => {
       return cache.addAll([
         './',
         './index.html',
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHSnlk07dlUxrQlDkKsXnIYq7k8BwFDGX9pg&s'
+        'https://sumteck.github.io/nam/logo512'
       ]);
     })
   );
