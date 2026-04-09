@@ -1,87 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- PWA Manifest Link -->
-<link rel="manifest" href="manifest.json">
-
-<!-- WhatsApp & Facebook Preview Meta Tags -->
-<meta property="og:title" content="National Ayush Mission - Attendance Form">
-<meta property="og:description" content="Generate and Print Employee Attendance PDF easily.">
-<meta property="og:image" content="https://sumteck.github.io/nam/logo512.png">
-<meta property="og:url" content="https://sumteck.github.io/nam/">
-<meta property="og:type" content="website">
-
-<!-- Mobile App Icon for iOS -->
-<link rel="apple-touch-icon" href="https://sumteck.github.io/nam/logo512.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>National Ayush Mission - Attendance Form</title>
     <style>
-        /* മൊബൈൽ വ്യൂവിനുള്ള മികച്ച ക്രമീകരണം */
-@media screen and (max-width: 600px) {
-    /* മെയിൻ പേജ് സ്ക്രീനിന് അനുസരിച്ച് വലുപ്പം മാറാൻ */
-    .page {
-        width: 100% !important;
-        margin: 0 !important;
-        padding: 10px !important;
-        box-shadow: none !important;
-    }
 
-    /* ഹെഡറിലെ എഴുത്തുകൾ ചെറുതാക്കാൻ */
-    header h2 {
-        font-size: 14px !important;
-        margin-top: 30px !important;
-    }
-    
-    header p {
-        font-size: 11px !important;
-    }
-
-    /* ലോഗോ അല്പം ചെറുതാക്കാൻ */
-    .header-logo-image {
-        width: 60px !important;
-        left: 5px !important;
-        bottom: -25px !important;
-    }
-
-    /* ടേബിൾ മുറിഞ്ഞു പോകാതിരിക്കാൻ ഇത് സഹായിക്കും */
-    .table-container {
-        width: 100%;
-        overflow-x: auto; /* വശങ്ങളിലേക്ക് നീക്കി നോക്കാം */
-        -webkit-overflow-scrolling: touch;
-        margin-top: 20px;
-    }
-
-    table {
-        min-width: 800px; /* ടേബിളിന്റെ ഒറിജിനൽ വലിപ്പം നിലനിർത്തും */
-        font-size: 10px !important;
-    }
-
-    /* ബട്ടണുകൾ ഒന്നിന് താഴെ ഒന്നായി ക്രമീകരിക്കാൻ */
-    .no-print {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        padding: 10px;
-    }
-
-    .upload-section {
-        flex-direction: column !important;
-        align-items: stretch !important;
-        gap: 10px !important;
-    }
-
-    /* ഇൻപുട്ട് ബോക്സുകൾ സ്ക്രീനിന് അനുസരിച്ചാക്കാൻ */
-    input[type="text"], input[type="month"] {
-        width: 100% !important;
-    }
-
-    .footer-section {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
-}
         body { font-family: 'Arial', sans-serif; background-color: skyblue; padding: 10px; margin: 0; }
         
         .page {
@@ -194,41 +118,223 @@
             }
             input[type="month"]::-webkit-calendar-picker-indicator { display: none; }
         }
+
+/* മൊബൈൽ വ്യൂവിനുള്ള മികച്ച ക്രമീകരണം */
+@media screen and (max-width: 600px) {
+    /* മെയിൻ പേജ് സ്ക്രീനിന് അനുസരിച്ച് വലുപ്പം മാറാൻ */
+    .page {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 10px !important;
+        box-shadow: none !important;
+    }
+
+    /* ഹെഡറിലെ എഴുത്തുകൾ ചെറുതാക്കാൻ */
+    header h2 {
+        font-size: 14px !important;
+        margin-top: 30px !important;
+    }
+    
+    header p {
+        font-size: 11px !important;
+    }
+
+    /* ലോഗോ അല്പം ചെറുതാക്കാൻ */
+    .header-logo-image {
+        width: 60px !important;
+        left: 5px !important;
+        bottom: -25px !important;
+    }
+
+    /* ടേബിൾ മുറിഞ്ഞു പോകാതിരിക്കാൻ ഇത് സഹായിക്കും */
+    .table-container {
+        width: 100%;
+        overflow-x: auto; /* വശങ്ങളിലേക്ക് നീക്കി നോക്കാം */
+        -webkit-overflow-scrolling: touch;
+        margin-top: 20px;
+    }
+
+    table {
+        min-width: 800px; /* ടേബിളിന്റെ ഒറിജിനൽ വലിപ്പം നിലനിർത്തും */
+        font-size: 10px !important;
+    }
+
+    /* ബട്ടണുകൾ ഒന്നിന് താഴെ ഒന്നായി ക്രമീകരിക്കാൻ */
+    .no-print {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .upload-section {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 10px !important;
+    }
+
+    /* ഇൻപുട്ട് ബോക്സുകൾ സ്ക്രീനിന് അനുസരിച്ചാക്കാൻ */
+    input[type="text"], input[type="month"] {
+        width: 100% !important;
+    }
+
+    .footer-section {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
+
+/* --- Desktop View Styles (ഇൻലൈൻ സ്റ്റൈലുകൾക്ക് പകരം) --- */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.upload-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background: #e3f2fd;
+    border-radius: 5px;
+    gap: 15px;
+}
+
+.view-counter {
+    display: inline-flex;
+    align-items: center;
+    background-color: #07f44e;
+    color: #011104;
+    padding: 0px 20px;
+    border-radius: 5px;
+    font-family: sans-serif;
+    border: 1px solid #1565c0;
+    height: 35px;
+    white-space: nowrap;
+}
+
+.view-counter svg { margin-right: 8px; }
+.view-text { display: flex; align-items: baseline; gap: 5px; }
+.view-label { font-size: 10px; text-transform: uppercase; font-weight: bold; }
+#rubun-view-count { font-size: 14px; font-weight: bold; }
+
+.file-uploads {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    flex-wrap: wrap;
+}
+
+.file-uploads label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.file-uploads input[type="file"] {
+    width: 150px;
+}
+
+.edit-link-btn {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #1a73e8;
+    padding: 8px 15px;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* --- മൊബൈൽ വ്യൂവിനുള്ള ക്രമീകരണം (@media) --- */
+@media screen and (max-width: 600px) {
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .upload-section {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .file-uploads {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .file-uploads label {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        background: #ffffff;
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    .file-uploads input[type="file"] {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .view-counter {
+        justify-content: center;
+    }
+    
+    .edit-link-btn {
+        justify-content: center;
+    }
+}
     </style>
+
 </head>
 <body>
+    
 
 <div class="no-print">
-    <button class="btn btn-add" onclick="addRow()">➕ Add Employee</button>
-    <button class="btn btn-save" onclick="saveToLocal()">💾 Save Draft</button>
-    <button class="btn btn-clear" onclick="clearAll()">🗑️ Delete All</button>
-    <button class="btn btn-print" onclick="window.print()">🖨️ Print / PDF</button>
+    <div class="action-buttons">
+        <button class="btn btn-add" onclick="addRow()">➕ Add Employee</button>
+        <button class="btn btn-save" onclick="saveToLocal()">💾 Save Draft</button>
+        <button class="btn btn-clear" onclick="clearAll()">🗑️ Delete All</button>
+        <button class="btn btn-print" onclick="window.print()">🖨️ Print / PDF</button>
+    </div>
 
-    <div class="upload-section" style="display: flex; align-items: center; justify-content: space-between; padding: 10px; background: #e3f2fd; border-radius: 5px; flex-wrap: nowrap;">
-    
-    <div style="display: inline-flex; align-items: center; background-color: #07f44e; color: #011104; padding: 0px 25px; border-radius: 5px; font-family: sans-serif; border: 1px solid #1565c0; min-width: 100px; height: 35px; flex-shrink: 0;">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;">
-            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-            <circle cx="12" cy="12" r="3"></circle>
-        </svg>
-        <div style="display: flex; align-items: baseline; gap: 5px;">
-            <span style="font-size: 10px; text-transform: uppercase; font-weight: bold;">Views:</span>
-            <span id="rubun-view-count" style="font-size: 14px; font-weight: bold;">...</span>
+    <div class="upload-section">
+        
+        <div class="view-counter">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+            <div class="view-text">
+                <span class="view-label">Views:</span>
+                <span id="rubun-view-count">...</span>
+            </div>
         </div>
-    </div>
 
-    <div style="flex-grow: 1; display: flex; justify-content: center; gap: 15px; font-size: 12px; font-weight: bold;">
-        <span>Round Seal : <input type="file" onchange="loadImg(event, 'imgRound')" style="width: 150px;"></span>
-        <span>Signature : <input type="file" onchange="loadImg(event, 'imgSig')" style="width: 150px;"></span>
-        <span>Designation Seal : <input type="file" onchange="loadImg(event, 'imgDesig')" style="width: 150px;"></span>
-    </div>
+        <div class="file-uploads">
+            <label>Round Seal : <input type="file" onchange="loadImg(event, 'imgRound')"></label>
+            <label>Signature : <input type="file" onchange="loadImg(event, 'imgSig')"></label>
+            <label>Designation Seal : <input type="file" onchange="loadImg(event, 'imgDesig')"></label>
+        </div>
 
-    <a href="https://cert.rubundroid.com/img" target="_blank" title="Crop/Edit Images" 
-       style="text-decoration: none; font-size: 14px; font-weight: bold; color: #ffffff; background-color: #1a73e8; padding: 8px 15px; border-radius: 5px; display: inline-flex; align-items: center; gap: 8px; flex-shrink: 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-       Edit Sign & Seal ✂️
-    </a>
-</div>
-    
+        <a href="https://cert.rubundroid.com/img" target="_blank" title="Crop/Edit Images" class="edit-link-btn">
+            Edit Sign & Seal ✂️
+        </a>
+    </div>
 </div>
 
 <div class="page">
@@ -443,6 +549,134 @@ etc)
 /* counter js end */
 
 </script>
+<style>
+    .whatsapp-contact-container {
+        margin: 20px auto;
+        max-width: 800px;
+        padding: 10px;
+    }
+    .whatsapp-grid {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+    .wa-box {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background-color: #ffffff; /* തുടക്കത്തിൽ വെള്ള കളർ */
+        border: 2px solid #25d366;
+        padding: 10px 20px;
+        border-radius: 10px;
+        text-decoration: none;
+        color: #25d366;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        min-width: 150px;
+        justify-content: center;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .wa-box img {
+        width: 25px;
+        height: 25px;
+    }
+    
+    /* മൗസ് വെക്കുമ്പോൾ ബോക്സ് പച്ചയും എഴുത്ത് വെള്ളയും ആകാൻ */
+    .wa-box:hover {
+        background-color: #25d366;
+        color: white;
+        transform: translateY(-3px);
+    }
 
+    /* ലോഗോ മാറ്റമില്ലാതെ കാണാൻ താഴെ മാറ്റം വരുത്തി */
+    .wa-box:hover img {
+        filter: none !important; /* ലോഗോ വെള്ളയാകുന്നത് ഒഴിവാക്കി */
+    }
+
+    /* പ്രിന്റ് എടുക്കുമ്പോൾ ഇത് കാണാതിരിക്കാൻ */
+    @media print {
+        .whatsapp-contact-container { display: none !important; }
+    }
+    
+    /* മൊബൈൽ വ്യൂവിനായി */
+    @media screen and (max-width: 600px) {
+        .whatsapp-grid { flex-direction: column; align-items: center; }
+        .wa-box { width: 80%; }
+    }
+</style>
+<div class="whatsapp-contact-container no-print">
+    <p style="text-align: center; font-weight: bold; margin-bottom: 10px; color: #333;">Contact for Support</p>
+    <div class="whatsapp-grid">
+        <a href="https://wa.me/919447596675" target="_blank" class="wa-box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WA">
+            <span>Sumesh.T.K</span>
+        </a>
+
+        <a href="https://wa.me/917025081081" target="_blank" class="wa-box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WA">
+            <span>Ramakrishan.K</span>
+        </a>
+
+        <a href="https://wa.me/919946479273" target="_blank" class="wa-box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WA">
+            <span>Pratheesh.M.P</span>
+        </a>
+    </div>
+</div>
+
+<style>
+    .whatsapp-contact-container {
+        margin: 20px auto;
+        max-width: 800px;
+        padding: 10px;
+    }
+    .whatsapp-grid {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+    .wa-box {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background-color: #ffffff; /* തുടക്കത്തിൽ വെള്ള കളർ */
+        border: 2px solid #25d366;
+        padding: 10px 20px;
+        border-radius: 10px;
+        text-decoration: none;
+        color: #25d366;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        min-width: 150px;
+        justify-content: center;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .wa-box img {
+        width: 25px;
+        height: 25px;
+    }
+    /* മൗസ് വെക്കുമ്പോൾ പച്ച കളർ ആകാൻ */
+    .wa-box:hover {
+        background-color: #25d366;
+        color: white;
+        transform: translateY(-3px);
+    }
+    .wa-box:hover img {
+        filter: brightness(0) invert(1); /* ലോഗോ വെള്ളയാക്കാൻ */
+    }
+
+    /* പ്രിന്റ് എടുക്കുമ്പോൾ ഇത് കാണാതിരിക്കാൻ */
+    @media print {
+        .whatsapp-contact-container { display: none !important; }
+    }
+    
+    /* മൊബൈൽ വ്യൂവിനായി */
+    @media screen and (max-width: 600px) {
+        .whatsapp-grid { flex-direction: column; align-items: center; }
+        .wa-box { width: 80%; }
+    }
+</style>
 </body>
 </html>
