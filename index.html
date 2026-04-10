@@ -316,12 +316,64 @@
 <body>
     
 
+<style>
+    /* ബട്ടണുകളുടെ പൊതുവായ ഡിസൈൻ */
+    .custom-btn {
+        text-decoration: none;
+        color: #000 !important; /* അക്ഷരങ്ങൾ കറുപ്പ് നിറത്തിൽ */
+        font-weight: bold;
+        padding: 10px 18px;
+        border-radius: 8px;
+        border: 2px solid #d4a005;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+    }
+
+    .custom-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        filter: brightness(1.05);
+    }
+
+    /* നിലവിലുള്ള നിങ്ങളുടെ മറ്റ് ബട്ടണുകൾക്കും ഷാഡോ നൽകാൻ */
+    .btn {
+        border-radius: 8px;
+        border: 1px solid rgba(0,0,0,0.1);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s;
+        cursor: pointer;
+        padding: 10px 18px;
+        font-weight: bold;
+        color: white;
+    }
+    
+    .btn:hover {
+        transform: translateY(-2px);
+    }
+</style>
+
 <div class="no-print">
-    <div class="action-buttons">
-        <button class="btn btn-add" onclick="addRow()">➕ Add Employee</button>
-        <button class="btn btn-save" onclick="saveToLocal()">💾 Save Draft</button>
-        <button class="btn btn-clear" onclick="clearAll()">🗑️ Delete All</button>
-        <button class="btn btn-print" onclick="window.print()">🖨️ Print / PDF</button>
+    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 20px 0; flex-wrap: wrap; gap: 10px;">
+        
+        <a href="https://www.sumteck.in" target="_blank" class="custom-btn" style="background-color: #f3b806;">
+            🏠 sumteck.in
+        </a>
+
+        <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+            <button class="btn btn-add" style="background-color: #007bff;" onclick="addRow()">➕ Add Employee</button>
+            <button class="btn btn-save" style="background-color: #28a745;" onclick="saveToLocal()">💾 Save Draft</button>
+            <button class="btn btn-clear" style="background-color: #dc3545;" onclick="clearAll()">🗑️ Delete All</button>
+            <button class="btn btn-print" style="background-color: #e83e8c;" onclick="window.print()">🖨️ Print / PDF</button>
+        </div>
+
+        <a href="https://www.sumteck.in" target="_blank" class="custom-btn" style="background-color: #f3b806;">
+            🏠 More Tools
+        </a>
+
     </div>
 
     <div class="upload-section">
